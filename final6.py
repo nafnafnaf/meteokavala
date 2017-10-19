@@ -1,10 +1,12 @@
-import sys, time, telepot, unicodedata, urllib3, wikiquote, random
+import os, sys, time, telepot, unicodedata, urllib3, wikiquote, random
 from telepot.loop import MessageLoop
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
 from time import gmtime, strftime
 from tabulate import tabulate
 
+token = os.environ['TELEGRAM_TOKEN']
+some_api_token = os.environ['SOME_API_TOKEN']
 #BeautifulSoup 
 def scrap():
     url = 'http://www.meteokav.gr/weather/'
