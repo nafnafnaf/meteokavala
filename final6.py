@@ -1,4 +1,4 @@
-import os, sys, time, telepot, unicodedata, urllib3, wikiquote, random
+import os, sys, time, telepot, unicodedata, urllib3, random
 from telepot.loop import MessageLoop
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
