@@ -6,7 +6,7 @@ from time import gmtime, strftime
 from tabulate import tabulate
 
 TOKEN= os.environ['TELEGRAM_TOKEN']
-some_api_token = os.environ['SOME_API_TOKEN']
+#some_api_token = os.environ['SOME_API_TOKEN']
 r = redis.from_url(os.environ.get("REDIS_URL"))
 #PORT = int(os.environ.get('PORT', '5000'))
 #updater = Updater(TOKEN)
@@ -55,7 +55,7 @@ def handle(msg):
 
 
 bot = telepot.Bot(TOKEN)
-some_api = some_api_lib.connect(some_api_token)
+#some_api = some_api_lib.connect(some_api_token)
 MessageLoop(bot, handle).run_as_thread()
 print ('Listening ...')
 
