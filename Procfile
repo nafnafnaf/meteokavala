@@ -1,1 +1,1 @@
-web: python final6.py
+worker: python final6.py
