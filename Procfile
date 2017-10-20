@@ -1,1 +1,1 @@
-bot: python3 final6.py
+web: python3 final6.py
