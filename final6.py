@@ -16,10 +16,7 @@ r = redis.from_url(os.environ.get("REDIS_URL"))
   #                    url_path=TOKEN)
 #updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
 #updater.idle()
-import telepot
-bot = telepot.Bot('TOKEN')
-bot.deleteWebhook()
-#BeautifulSoup 
+
 def scrap():
     url = 'http://www.meteokav.gr/weather/'
     req = urlopen(url)
