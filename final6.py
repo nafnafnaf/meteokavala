@@ -1,14 +1,13 @@
-import os, sys, time, telepot, unicodedata, urllib3, random
+import os, sys, time, telepot, unicodedata, urllib3, random, redis
 from telepot.loop import MessageLoop
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
 from time import gmtime, strftime
 from tabulate import tabulate
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-import logging
-TOKEN= os.environ['TELEGRAM_TOKEN']
-#some_api_token = os.environ['SOME_API_TOKEN']
 
+TOKEN= os.environ['TELEGRAM_TOKEN']
+some_api_token = os.environ['SOME_API_TOKEN']
+r = redis.from_url(os.environ.get("REDIS_URL"))
 #PORT = int(os.environ.get('PORT', '5000'))
 #updater = Updater(TOKEN)
 # add handlers
@@ -56,6 +55,7 @@ def handle(msg):
 
 
 bot = telepot.Bot(TOKEN)
+some_api = some_api_lib.connect(some_api_token)
 MessageLoop(bot, handle).run_as_thread()
 print ('Listening ...')
 
