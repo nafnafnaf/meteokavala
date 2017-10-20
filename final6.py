@@ -4,7 +4,7 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
 from time import gmtime, strftime
 from tabulate import tabulate
-
+from telegram.ext import Updater
 TOKEN= os.environ['TELEGRAM_TOKEN']
 #some_api_token = os.environ['SOME_API_TOKEN']
 
