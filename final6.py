@@ -5,10 +5,9 @@ from bs4 import BeautifulSoup as soup
 from time import gmtime, strftime
 from tabulate import tabulate
 
-#token = os.environ['TELEGRAM_TOKEN']
+TOKEN= os.environ['TELEGRAM_TOKEN']
 #some_api_token = os.environ['SOME_API_TOKEN']
 
-TOKEN = "TOKEN"
 PORT = int(os.environ.get('PORT', '5000'))
 updater = Updater(TOKEN)
 # add handlers
