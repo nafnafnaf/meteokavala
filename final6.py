@@ -43,7 +43,6 @@ def handle(msg):
     if content_type == 'text':
         bot.sendMessage(chat_id, scrap())
 
-TOKEN = token 
 
 bot = telepot.Bot(TOKEN)
 MessageLoop(bot, handle).run_as_thread()
