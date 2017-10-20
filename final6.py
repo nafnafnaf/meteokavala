@@ -5,8 +5,19 @@ from bs4 import BeautifulSoup as soup
 from time import gmtime, strftime
 from tabulate import tabulate
 
-token = os.environ['TELEGRAM_TOKEN']
-some_api_token = os.environ['SOME_API_TOKEN']
+#token = os.environ['TELEGRAM_TOKEN']
+#some_api_token = os.environ['SOME_API_TOKEN']
+
+TOKEN = "TOKEN"
+PORT = int(os.environ.get('PORT', '5000'))
+updater = Updater(TOKEN)
+# add handlers
+updater.start_webhook(listen="0.0.0.0",
+                      port=PORT,
+                      url_path=TOKEN)
+updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
+updater.idle()
+
 #BeautifulSoup 
 def scrap():
     url = 'http://www.meteokav.gr/weather/'
