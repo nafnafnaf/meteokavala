@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup as soup
 from time import gmtime, strftime
 from tabulate import tabulate
 
-#token = os.environ['TELEGRAM_TOKEN']
-#some_api_token = os.environ['SOME_API_TOKEN']
+token = os.environ['TELEGRAM_TOKEN']
+some_api_token = os.environ['SOME_API_TOKEN']
 #BeautifulSoup 
 def scrap():
     url = 'http://www.meteokav.gr/weather/'
