@@ -63,5 +63,5 @@ print ('Listening ...')
 
 # Keep the program running.
 while 1:
-    time.sleep(1)
+    time.sleep(120)
 
